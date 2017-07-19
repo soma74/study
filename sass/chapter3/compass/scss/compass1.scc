@@ -1,0 +1,51 @@
+@import "compass/reset";
+@import "compass/css3";
+
+.container {
+  @include display-flex;
+  @include flex-wrap(wrap);   
+}
+
+header, footer {
+  @include flex(1 100%);  
+}
+header, footer, aside, article {
+  @include display-flex;
+  align-items: center;
+  justify-content: center;   
+  font-size: 1.5em;
+  color:#fff;
+}
+header {
+  height:100px;
+  border-bottom:1px solid #fff;
+  @include background-image(linear-gradient(#565857, #aaaaaa));
+}
+aside {  
+  flex:0 1 300px;    
+  min-height: 300px;
+  background-color:#90be5e;
+}
+article {
+  @include flex(4 0 300px);
+   @include flow-from(target);  
+  height: 500px;
+  background-color:#5e89be;
+}
+footer {
+  height:100px;
+  border-top:1px solid #fff;
+  @include background-image(linear-gradient(to right, #90be5e, #5e89be));  
+}
+
+.adbanner {
+   flex:1 0 100px;
+   @include flow-into(target);
+    
+  .adbox1, .adbox2 {
+    border:2px solid red;
+    padding:20px;
+    margin:10px;
+    width:150px;
+  }
+}

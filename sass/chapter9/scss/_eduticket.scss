@@ -1,0 +1,57 @@
+
+.block1{
+   margin-top: 40px;
+   padding:20px 30px 80px;
+   border-bottom: 1px solid rgba($black,0.1);
+    h1 {
+      @include fontbold(3.2rem);
+      color: $educolor;
+    }
+    h3 {
+      @include fontbold(2rem);
+      line-height: 1.5em;
+    }
+    h4 {
+       @include fontbold(2rem);
+       padding:0;
+       color:$educolor;
+    }
+   p {
+      padding: 5px 10px 20px 5px;
+     font-size: 1.5rem;
+     line-height: 2.5rem;
+    }    
+}
+.block2 {
+  @extend .block1;
+  margin-top: -5px;
+
+  h3 {
+    @include fontbold(2.6rem);
+    margin-top: 40px;
+  }
+}
+
+.block3, .block4 {
+  @extend .block2;
+}
+
+.index-bottom {
+  padding: 50px 0 ;
+  margin-top: -10px;
+  background-color: $index-bottom;
+  color:$white;
+  //border-top:1px solid rgba($black,0.1);
+  .btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  a.btn-default {
+   background-color: transparent;
+    color:$white;
+    border-color: $white;
+
+  }
+}
+
+

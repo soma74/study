@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,SAAU;EAER,SAAS,EAAE,IAAI;ECHjB,eAAM;IACJ,MAAM,EAAC,CAAC;IACR,OAAO,EAAC,CAAC",
+"sources": ["../scss/4.import.scss","../scss/_box.scss"],
+"names": [],
+"file": "4.import.css"
+}

@@ -1,0 +1,351 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(https://fonts.googleapis.com/css?family=Oswald:700);
+@font-face {
+  font-family: 'NanumSquare';
+  src: url(./fonts/NanumSquareR.eot);
+  src: url(./fonts/NanumSquareR.eot?#iefix) format("embedded-opentype"), url(./fonts/NanumSquareR.woff) format("woff"), url(./fonts/NanumSquareR.ttf) format("truetype");
+}
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  padding-top: 0;
+  height: 100%;
+  margin-bottom: 141px;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1010px !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footpart {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 140px;
+}
+
+.navbar-default {
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  border: none;
+  border-radius: 0;
+}
+.navbar-default .navbar-header .navbar-brand {
+  margin-top: 12px;
+  margin-right: 25px;
+  width: 150px;
+  height: 40px;
+  background-image: url("../imgs/logo.png");
+}
+.navbar-default .navbar-nav > li
+> a {
+  padding-top: 24px;
+  font-size: 16px;
+  height: 65px;
+  color: #fff;
+  z-index: 999;
+}
+.navbar-default .navbar-nav > li
+> a:hover {
+  color: #f8535c;
+}
+.navbar-default .btn {
+  margin-top: 15px;
+  margin-left: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.navbar-default ul.navbar-right {
+  width: 180px;
+  text-align: right;
+}
+
+a.btn-white {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  color: #fff;
+  margin-top: 5px;
+}
+a.btn-white:hover {
+  text-decoration: none;
+  color: #f8535c;
+  border: 1px solid #f8535c;
+}
+
+.sticking {
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #f8535c;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+}
+
+.footpart {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 10px;
+  color: #313131;
+  border-top: 1px solid rgba(204, 204, 204, 0.5);
+}
+.footpart footer {
+  padding-bottom: 10px;
+}
+.footpart footer h2 {
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  color: #f8535c;
+}
+.footpart footer h5 {
+  font-size: 12px;
+}
+.footpart footer h4 {
+  font-weight: bold;
+  font-size: 16px;
+}
+.footpart footer a {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  padding-right: 8px;
+}
+.footpart footer .rightside {
+  margin-top: 20px;
+}
+.footpart footer ul.footlink li:after {
+  content: " /";
+}
+.footpart footer ul.footlink li:last-child:after {
+  content: "";
+}
+.footpart .copy-txt {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.frontback1 {
+  background-image: url(../imgs/primeback1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-width: 100%;
+  background-height: auto;
+  background-position: center center;
+}
+
+.frontback2 {
+  background-image: url(../imgs/primeback2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-width: 100%;
+  background-height: auto;
+  background-position: center center;
+}
+
+.centerbox {
+  margin: 15% auto;
+  color: #fff;
+}
+.centerbox h1 {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 3.5rem;
+  text-align: center;
+}
+.centerbox h2 {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+.centerbox h1 strong, .centerbox h2 strong {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.centerbox a.btn {
+  margin: 30px auto;
+  text-align: center;
+  padding: 15px 40px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.block1, .block2, .block3, .block4 {
+  margin-top: 40px;
+  padding: 20px 30px 80px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.block1 h1, .block2 h1, .block3 h1, .block4 h1 {
+  font-weight: bold;
+  font-size: 3.2rem;
+  color: #f8535c;
+}
+.block1 h3, .block2 h3, .block3 h3, .block4 h3 {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.5em;
+}
+.block1 h4, .block2 h4, .block3 h4, .block4 h4 {
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0;
+  color: #f8535c;
+}
+.block1 p, .block2 p, .block3 p, .block4 p {
+  padding: 5px 10px 20px 5px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.block2, .block3, .block4 {
+  margin-top: -5px;
+}
+.block2 h3, .block3 h3, .block4 h3 {
+  font-weight: bold;
+  font-size: 2.6rem;
+  margin-top: 40px;
+}
+
+.index-bottom {
+  padding: 50px 0;
+  margin-top: -10px;
+  background-color: #439fe0;
+  color: #fff;
+}
+.index-bottom .btn {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.index-bottom a.btn-default {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+a.back-to-top {
+  display: none;
+  width: 45px;
+  height: 45px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  background: #f8535c url("../imgs/up-arrow.png") no-repeat center 43%;
+  border-radius: 30px;
+}
+
+a:hover.back-to-top {
+  background-color: #000;
+}
+
+.list-filter {
+  background-color: rgba(204, 204, 204, 0.25);
+  margin-top: -20px;
+}
+
+.list-table {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+.list-table table.ctable {
+  border: none;
+  width: 100%;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  font-size: 1.05em;
+}
+.list-table table.ctable tr {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+}
+.list-table table.ctable tr:last-child {
+  border-bottom: none;
+}
+.list-table table.ctable td {
+  padding: 10px;
+}
+.list-table table.ctable td label {
+  width: 200px;
+}
+.list-table table.ctable td:first-child {
+  font-weight: bold;
+  font-size: 1.1em;
+  width: 130px;
+}
+.list-table table.ctable td:last-child {
+  padding-top: 15px;
+}
+
+article[role="list"] {
+  margin-top: 30px;
+}
+article[role="list"] .list-grid .thumbnail {
+  padding: 0;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+article[role="list"] .list-grid .thumbnail:hover {
+  outline: 1px solid #f8535c;
+  border: 1px solid #f8535c;
+}
+article[role="list"] .list-grid .thumbnail a {
+  text-decoration: none;
+}
+article[role="list"] .list-grid .thumbnail .thumb-img {
+  display: inline-block;
+  height: 308px;
+  overflow: hidden;
+}
+article[role="list"] .list-grid .thumbnail img {
+  position: relative;
+  z-index: 1;
+}
+article[role="list"] .list-grid .thumbnail .period {
+  width: 90.5%;
+  background-color: rgba(0, 0, 0, 0.55);
+  position: absolute;
+  top: 273px;
+  z-index: 100;
+  color: #fff;
+  padding: 8px 10px;
+}
+article[role="list"] .list-grid .thumbnail .caption {
+  background-color: rgba(255, 255, 255, 0.75);
+  position: relative;
+  z-index: 50;
+  color: #000;
+  padding-bottom: 10px;
+}
+article[role="list"] .list-grid .thumbnail .caption .stitle {
+  padding-left: 3px;
+  padding-bottom: 10px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+article[role="list"] .list-grid .thumbnail .caption .place {
+  padding-top: 10px;
+  font-size: 1.3rem;
+}
+article[role="list"] .list-grid .thumbnail .caption .tag {
+  font-size: 1.2rem;
+  padding: 2px;
+}
+article[role="list"] .list-grid .thumbnail .caption .tag .fa {
+  padding-right: 3px;
+}
+article[role="list"] .list-grid .thumbnail .caption .tag .red {
+  color: #f8535c;
+}
+article[role="list"] .list-grid .thumbnail .caption .tag .blue {
+  color: #439fe0;
+}
+
+/*# sourceMappingURL=style.css.map */

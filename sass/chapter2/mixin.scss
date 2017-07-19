@@ -1,0 +1,111 @@
+@mixin boldtext {
+  font:{
+    family: 'Malgun Gothic', sans-serif; 
+    weight:bold;
+    size:42px;
+  }
+ color:red; 
+}
+
+.boxsample {
+  @include boldtext;
+}
+
+// variable 
+
+@mixin boldtext($size, $color) {
+  font:{
+    family: 'Malgun Gothic', sans-serif; 
+    weight:bold;
+    size:$size;
+  }
+ color:$color; 
+}
+
+
+.boxsample3 {
+  @include boldtext(24px, #000);
+
+}
+
+.boxsample5 {
+  @include boldtext( $color:red, $size:36px);
+}
+
+// varibale arguemnt 
+
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+
+.shadows {
+  @include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);
+}
+
+
+@mixin colors($text, $background, $border) {
+  color: $text;
+  background-color: $background;
+  border-color: $border;
+}
+
+$values: #ff0000, #00ff00, #0000ff;
+.primary {
+  @include colors($values...);
+}
+
+$value-map: (text: #00ff00, background: #0000ff, border: #ff0000);
+.secondary {
+  @include colors($value-map...);
+}
+
+
+
+@mixin boldtext($size, $color) {
+  font:{
+    family: 'Malgun Gothic', sans-serif; 
+    weight:bold;
+    size:$size;
+  }
+  color:$color;
+  @content; 
+}
+
+
+.boxsample {
+  @include boldtext(12px, red) ;
+  border:1px solid blue;
+  padding:200px;
+}
+
+@mixin boldtext($size, $color) {
+  font:{
+    family: 'Malgun Gothic', sans-serif; 
+    weight:bold;
+    size:$size;
+  }
+  color:$color;  
+}
+
+
+.boxsample {
+  @include boldtext(12px, red) ;
+  border:1px solid blue;
+  padding:200px;
+}
+
+
+
+@mixin conbox {
+  header {    
+    height: 100px;
+    @content;
+  }
+}
+@include conbox {
+  #logo {
+    border:1px solid red;
+  }
+}

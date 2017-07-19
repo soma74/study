@@ -1,0 +1,71 @@
+.inq1 {
+  padding-top: 10px;
+  padding-bottom:20px;
+  margin-top: -18px;
+  h1 {
+    @include fontbold(2.5em);
+    padding-bottom: 5px;
+  }
+  h3 {
+   @include fontbold(2.2em);
+   padding-bottom: 50px;
+  }
+}
+
+.inq2 {
+  padding-top: 10px;
+  padding-bottom: 30px;
+   @include b-bottom($grey);
+  h2 {
+    @include fontbold(2.5em);
+  }
+  h4 {
+    padding:0;
+  }
+  h5 {
+    @include fontbold(1.6rem);
+    letter-spacing: 0px;
+  }
+}
+
+.inq3 {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  .col-xs-12 form {
+    input[type="text"] {  width: 470px; }
+    textarea { width: 670px;}
+    }
+  h2 {
+    @include fontbold(2.5em);
+    padding-bottom:10px;    
+  }
+  h4 {
+    padding-bottom: 10px;
+  }
+  span {
+    color:$educolor;
+  }
+  .btn-dtop {
+    padding-left:150px;
+    padding-right: 150px;
+    margin-left:240px;
+  }
+  .btn22 {
+    margin-left: 200px;
+  }
+   .innertable {
+    @include btb(1px, rgba($grey,.5)); 
+    td { 
+      @include b-bottom($grey);
+      padding-top:15px;
+      padding-bottom:15px;
+      &:first-child {
+        width: 230px;
+        padding-left:20px;
+        background-color:rgba($grey,0.1);
+        @include fontbold(16px);
+        vertical-align: middle;
+      }
+    }
+  }
+}

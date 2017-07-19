@@ -1,0 +1,112 @@
+.list-filter {
+  background-color: rgba($grey,0.25);
+  margin-top: -20px;
+}
+.list-table {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-top: 10px;
+  table.ctable {
+    border:none;
+    width: 100%;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+    font-size: 1.05em;
+    tr {
+      border-bottom:1px dotted rgba($black,0.1);
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    td {
+      padding:10px;
+      label { width: 200px;}
+      &:first-child {
+        font-weight: bold;
+        font-size: 1.1em;
+        width: 130px;
+      }
+     &:last-child {
+       padding-top: 15px;
+       }
+    }
+  }
+}
+
+article[role="list"] {
+ margin-top:30px;
+ .list-grid {
+    .thumbnail {
+      padding:0;
+      border-radius:0;
+      border:1px solid rgba($black,0.5);
+      &:hover { 
+         outline: 1px solid $educolor;
+         border:1px solid $educolor;
+       }  
+      a {
+         text-decoration: none;
+       }
+      .thumb-img {
+        display: inline-block;
+        // width:  305px;
+        height: 308px;
+        overflow: hidden;
+      }
+      img {
+        position:relative;
+        z-index: 1;
+
+      }
+     .period {
+         width: 90.5%;
+         background-color:rgba($black,0.55);
+         position: absolute;
+         top:273px;
+         z-index: 100;
+         color: $white;
+         padding:8px 10px;
+      }
+
+
+      .caption {
+        background-color:rgba($white,0.75);
+        position:relative;
+        z-index: 50;
+        color:$black;
+        padding-bottom:10px;
+       .stitle {
+          padding:{
+            left: 3px;
+            bottom:10px;
+          }
+         color: rgba($black,0.8);
+         @include fontbold(1.7rem);
+        }
+        .place {
+          padding-top: 10px;
+          font-size: 1.3rem;
+        }
+        .tag {
+          font-size: 1.2rem;
+          padding: 2px;
+          .fa {
+            padding-right: 3px;
+          }
+          .red {
+              color:$educolor;
+          }
+          .blue {
+            color:$index-bottom;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+
+
+

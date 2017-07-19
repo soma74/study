@@ -1,0 +1,61 @@
+.navbar-default {
+  height:65px;
+  background-color:rgba($black,.6);  // navbar style
+  width: 100%;
+  border:none;
+  border-radius:0;
+  .navbar-header {
+    .navbar-brand {
+      margin-top: 12px;
+      margin-right: 25px;
+      width: 150px;
+      height: 40px;
+      background-image:url('../imgs/logo.png');
+    }
+  }
+  .navbar-nav {
+       > li
+           > a { // nav bar link
+            padding-top:24px;
+            font-size: 16px;
+            height: 65px;
+            color:$white;
+            z-index: 999;
+            &:hover {
+              color:$educolor;
+            }
+          }
+       }
+       .btn {
+         margin-top:15px;
+         margin-left: 10px;
+         padding-left: 15px;
+         padding-right: 15px;
+        }
+
+    ul.navbar-right {
+      width: 180px;
+      text-align: right;
+    }
+  }
+a.btn-white {
+  background-color: transparent;
+  color:$white;
+  border:1px solid $white;
+  color:$white;
+  margin-top: 5px;
+  &:hover {
+    text-decoration: none;
+    color:$educolor;
+     border:1px solid $educolor;
+  }
+}
+
+
+.sticking {
+  width: 100%;
+  z-index: 999;
+  background-color:rgba($black,0.9);
+  border-bottom:1px solid $educolor;
+  box-shadow: 0 10px 15px rgba($black,0.35);
+}

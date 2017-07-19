@@ -1,0 +1,9 @@
+.firstClass {
+	$color: if(true, blue, red);
+	color: $color
+}
+
+.secondClass {
+	$color: if(false, blue, red);
+	color: $color
+}

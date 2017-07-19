@@ -1,0 +1,21 @@
+$default-color:#999;
+$navhover-color:#ffb069;
+nav {
+  ul {
+      list-style:none;
+      li{
+         display: inline-block;
+         a {
+             display: block;
+             padding: 5px 3px;
+             margin:10px 20px;
+             text-decoration: none;
+             color:$default-color;
+             &:hover {
+                  border-bottom:1px dotted $navhover-color;
+                  color:$navhover-color;
+              }  
+          }
+       }   
+    } 
+ }

@@ -1,0 +1,31 @@
+@for $b from 1 through 2 {   
+  .frontback#{$b}{  
+    @include backcover(url(../imgs/primeback#{$b}.jpg));
+  }
+}
+.centerbox { 
+  margin:15% auto; 
+  color:$white;  
+  h1 {
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  h2 {
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+  h1, h2 {
+    strong {
+      @include fontbold(1.25em);
+    }
+  }
+  a.btn {
+    margin: 30px auto;
+    text-align: center;
+    padding: 15px 40px;
+    display: inline-block;
+    @include fontbold(18px);
+  }
+}

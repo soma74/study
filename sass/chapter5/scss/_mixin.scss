@@ -1,0 +1,86 @@
+@mixin backcover ($url) {  // background cover 
+  background:{  
+    image:$url;  
+    repeat:no-repeat;
+    size:cover;
+    width: 100%;
+    height: auto;
+    position:center center;
+  }  
+}
+
+@mixin backcover ($url) {  
+  background:{  
+    image:$url;  
+    repeat:no-repeat;
+    size:cover;
+    width: 100%;
+    height: auto;
+    position:center center;
+  }  
+}
+
+@mixin fontbold ($size, $font-weight:bold) {  
+  font:{
+    weight: $font-weight;
+    size:$size;
+  }
+}
+
+@mixin fontcolor ($size, $color) {  
+  font-size: $size;
+  color:$color;
+}
+
+@mixin pmz ($padding, $margin) {  
+  padding:$padding;
+  margin:$margin;
+}
+
+@mixin bordersolid ( $width, $color, $border-style:solid) {  
+  border:{
+    width:$width;
+    color:$color;
+    style:$border-style;
+   }
+}
+
+@mixin boxs ($width, $height){  
+  width:$width;
+  height: $height;
+}
+
+@mixin btb ($width, $color) {  
+  border:{
+    top:$width $color solid;
+    bottom:$width $color solid;
+  }
+}
+
+@mixin backcover-bottom ($url) {  
+  background:{  
+    image:$url;  
+    repeat:no-repeat;
+    size:cover;
+    width: 100%;
+    height: auto;
+    position:center bottom;
+  }  
+}
+
+@mixin backcover-top ($url) { 
+  background:{  
+    image:$url;  
+    repeat:no-repeat;
+    size:cover;
+    width: 100%;
+    height: auto;
+    position:center top;
+  }  
+}
+
+
+@mixin fsize($fsize) {  
+  font-size: $fsize;
+  line-height: $fsize*1.4 ;
+}

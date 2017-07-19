@@ -1,0 +1,64 @@
+$default-color: #999;
+$navhover-color: #ffb069;
+$aside-hover: #ff0000;
+$header-back: #eee;
+
+nav {
+    ul {
+        list-style: none;
+        float: right;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: block;
+                padding: 5px 3px;
+                margin: 10px 20px;
+                text-decoration: none;
+                color: $default-color;
+
+                &:hover {
+                    border-bottom: 1px dotted $navhover-color;
+                    color: $navhover-color;
+                }
+            }
+        }
+    }
+}
+
+header {
+    background-color: $header-back;
+    display: block;
+    height: 100px;
+
+    @extend nav;
+}
+
+aside {
+    width: 250px;
+    float: left;
+
+    @extend nav;
+
+    ul {
+        padding: 0;
+        margin-top: 30px;
+        float: left;
+
+        li {
+            display: block;
+
+            a {
+                padding: 5px 10px;
+                margin: 0;
+                width: 100px;
+
+                &:hover {
+                    border: 1px solid $aside-hover;
+                    color: $aside-hover;
+                }
+            }
+        }
+    }
+}

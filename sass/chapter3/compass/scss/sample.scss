@@ -1,0 +1,206 @@
+@import "compass/reset";
+@import "compass/css3";
+
+/*animation */
+.widget:hover {
+    @include animation(flipOutY);
+}
+/* appearance */
+.btn {
+   @include appearance(button);
+}
+
+
+/* background clip */
+#padding-box {
+  @include background-clip(padding-box);
+  }
+#border-box {
+  @include background-clip(border-box);
+}
+
+/* background origin */
+#padding-box {
+    @include background-origin(padding-box);
+}
+#border-box {
+    @include background-origin(border-box);
+}
+#content-box {
+    @include background-origin(content-box);
+} 
+/* background size */
+
+#auto {
+    @include background-size(auto);
+}
+#contain {
+  @include background-size(contain);
+}
+#cover {
+  @include background-size(cover);
+}
+#percent {
+  @include background-size(50% 50%);
+}
+#absolute {
+  @include background-size(100px 25px);
+}
+
+/* border radius */
+#border-radius {
+  @include border-radius(25px);
+}
+ 
+#border-radius-top-left {
+  @include border-top-left-radius(25px);
+}
+/* box shadow */
+#box-shadow-default {
+  @include single-box-shadow;
+}
+
+#box-shadow-custom {
+  @include box-shadow(red 2px 2px 10px);
+}
+
+/* box sizing */
+
+#content-box {
+  @include box-sizing(content-box);
+}
+ 
+#border-box {
+  @include box-sizing(border-box);
+}
+
+
+/* columns */
+
+#two-column {
+  @include column-count(2);
+  width: 300px;
+  margin-bottom: 20px;
+}
+ 
+#three-column {
+  @include column-count(3);
+  width: 300px;
+  margin-bottom: 20px;
+}
+ 
+#four-column-with-rule {
+  @include column-count(4);
+  @include column-rule(1px, solid, red);
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+/* filter */
+.img {
+  @include filter(grayscale(100%));
+}
+
+/* flexbox*/
+
+.container  {
+  @include display-flex; 
+}
+.flexbox {   
+  @include flex(1);
+}
+
+/* font face */
+
+@include font-face("Blooming Grove", font-files("examples/bgrove.ttf", "examples/bgrove.otf"));
+ 
+.example {
+  font-family: "Blooming Grove";
+  font-size: 1.5em;
+}
+
+/*  Hyphenation   */
+
+article p {
+  @include word-break(none);
+  @include hyphens(auto);
+}
+
+article p {
+  @include hyphenation;
+}
+
+/* image gradient */
+
+#radial-gradient {
+  @include background-image(radial-gradient(45px 45px, cyan 10px, dodgerblue 30px));
+}
+ 
+#linear-gradient {
+  @include background-image(linear-gradient(to bottom right, white, #dddddd));
+}
+
+#v-gradient {
+  @include background-image(linear-gradient(white, #aaaaaa));
+}
+
+#angle-gradient {
+  $svg-gradient-shim-threshold: 1 !global;
+  @include background-image(linear-gradient(120deg, #2ac363, #cd8c14, #9c4cc2));
+  width: 80px;
+  height: 80px;
+}
+
+/* inline block */
+#inline-block {
+  @include inline-block;
+}
+
+/* opacity */
+
+#opacity-50 {
+  @include opacity(0.5);
+}
+
+
+/* CSS regions */
+
+.into {
+  @include flow-into(target); 
+}
+.from {
+  @include flow-from(target);
+}
+
+/* text shadow */
+
+.has-single-shadow {
+  @include single-text-shadow;
+}
+ 
+.has-custom-shadow {
+  @include text-shadow(rgba(blue, 0.2) 1px 1px 0, rgba(blue, 0.2) 2px 2px 0, rgba(blue, 0.2) 3px 3px 0);
+}
+
+
+/* transform */
+
+.transform {
+   @include transform(skew(10deg,10deg) scale(1.5));
+}
+
+/* transition */
+#width-duration-easein {
+  @include transition-property(width);
+  @include transition-duration(2s);
+  @include transition-timing-function(ease-in);
+}
+
+/*user interface */
+
+input[type="text"] {
+  @include input-placeholder {
+    color: #bfbfbf;
+    font-style: italic;
+  }
+}

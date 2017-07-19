@@ -1,0 +1,18 @@
+.select {
+   padding:20px;
+  a {
+    color:red;
+    text-decoration:none; 
+    &:hover {
+      text-decoration:underline;
+     }
+   } 
+}
+
+
+.select1 {
+  padding:30px;
+  .another & {
+    margin:20px;
+  }
+}

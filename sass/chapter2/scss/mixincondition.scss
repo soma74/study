@@ -1,0 +1,41 @@
+@mixin test($condition) {
+    $color: if($condition, blue, red);
+    color:$color
+}
+
+.firstClass {
+    @include test(true);
+}
+
+.secondClass {
+    @include test(false);
+}
+
+
+@mixin txt($weight) {
+    color: white;
+    @if $weight == bold { font-weight: bold;}
+    @else if $weight == light { font-weight: 100;}
+    @else if $weight == heavy { font-weight: 900;}
+    @else { font-weight: normal;}
+    }
+
+.txt1 {
+    @include txt(bold);
+}
+
+.txt2 {
+    @include txt(light);
+}
+
+.txt3 {
+    @include txt(heavy);
+}
+
+.txt4 {
+ @include txt(none);
+}
+
+.txt5 {
+    @include txt(normal)
+}

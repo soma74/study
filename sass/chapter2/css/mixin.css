@@ -1,0 +1,55 @@
+.boxsample {
+  font-family: 'Malgun Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 42px;
+  color: red; }
+
+.boxsample3 {
+  font-family: 'Malgun Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #000; }
+
+.boxsample5 {
+  font-family: 'Malgun Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: red; }
+
+.shadows {
+  -moz-box-shadow: 0px 4px 5px #666, 2px 6px 10px #999;
+  -webkit-box-shadow: 0px 4px 5px #666, 2px 6px 10px #999;
+  box-shadow: 0px 4px 5px #666, 2px 6px 10px #999; }
+
+.primary {
+  color: #ff0000;
+  background-color: #00ff00;
+  border-color: #0000ff; }
+
+.secondary {
+  color: #00ff00;
+  background-color: #0000ff;
+  border-color: #ff0000; }
+
+.boxsample {
+  font-family: 'Malgun Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: red;
+  border: 1px solid blue;
+  padding: 200px; }
+
+.boxsample {
+  font-family: 'Malgun Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: red;
+  border: 1px solid blue;
+  padding: 200px; }
+
+header {
+  height: 100px; }
+  header #logo {
+    border: 1px solid red; }
+
+/*# sourceMappingURL=mixin.css.map */

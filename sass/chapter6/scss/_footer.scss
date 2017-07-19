@@ -1,0 +1,37 @@
+.footpart {  
+  background-color:rgba($white,0.8);
+  padding-top:10px;
+  color:$footpart; 
+  border-top:1px solid rgba($grey,0.5);
+  footer {  
+    padding-bottom:10px;
+    h2 {  
+      font-weight: bold;
+      font-family: 'Oswald', sans-serif;
+      color:$educolor;
+    }
+    h5 {
+      font-size:12px;
+    }
+   h4 {
+    @include fontbold (16px);
+   }
+   a {
+    @include fontcolor(14px,rgba($black,0.8) );    
+    padding-right:8px;
+   } 
+   .rightside {
+    margin-top: 20px;
+   }
+   ul.footlink {
+    li { 
+      &:after {content: " /";}
+      &:last-child:after {content: "";}
+     }
+   }
+  }  
+ .copy-txt {
+   font-size:12px;
+   margin-top: 20px;
+ }  
+}

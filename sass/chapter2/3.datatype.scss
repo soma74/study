@@ -1,0 +1,53 @@
+$name: foo;
+$attr: border;
+$color:#ff0000;
+$hname:'.header'; 
+$value :10px 2px 5px 10px;
+$font:"lucida Grande", sans-serif;
+
+p.#{$name} {
+  #{$attr}-color: $color;
+  margin:$value;
+  font-family: $font;
+}
+
+#{$hname} {
+ #{$attr}-color: $color; 
+}
+
+/* Color Operations */
+
+$red50: rgba(255, 0, 0, 0.5);
+div {
+  color: opacify($red50, 0.3);
+  background-color: transparentize($red50, 0.25);
+}
+
+a {
+  color: rgba(255, 0, 0, 0.75) + rgba(0, 255, 0, 0.75);
+}
+
+/* Variable Defaults: !default */
+
+
+
+$content: "First content";
+$content: "Second content?" !default;
+$new_content: "First time reference" !default;
+
+#main {
+  content: $content;
+  new-content: $new_content;
+}
+
+$content1: "First content";
+$content1: "Second content?";
+$new_content2: "First time reference" !default;
+$new_content2: "second time reference" ;
+
+#main {
+  content: $content1;
+  new-content: $new_content2;
+}
+
+

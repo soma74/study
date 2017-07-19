@@ -1,0 +1,9 @@
+@media print {
+  .page {
+    width: 800px;
+    @at-root (without: media) {
+      color: red;
+    }
+  }
+}
+

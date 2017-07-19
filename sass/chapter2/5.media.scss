@@ -1,0 +1,31 @@
+.sidebar {
+  width: 300px;
+  @media screen and (orientation: landscape) {
+    width: 500px;
+  }
+}
+
+/*  min-width & max-width*/
+@media (min-width: 768px) {
+  @media (max-width: 767px) {
+    .sidebar {
+      width:500px
+    }
+  }
+}
+
+
+/* variable & interpolation */
+$media: screen;
+$feature: landscape;
+$value: 500px;
+
+.sidebar {
+  width:$value;
+  @media #{$media}  {
+    @media (orientation:$feature) {
+      width:$value+200;
+     }
+  }
+}
+

@@ -1,0 +1,79 @@
+.firstClass {
+    $color: if(true, blue, red);
+    color:$color
+}
+
+.secondClass {
+       $color: if(false, blue, red);
+    color:$color
+}
+
+// @if 
+
+.txt1 {
+    color: white;
+    @if normal == bold { font-weight: bold;}
+}
+
+.txt2 {
+    color: red;
+    @if bold == bold { font-weight: bold;}
+}
+
+
+$weight:bold;
+.txt1 {
+  @if $weight == bold { font-weight: bold;}
+  @else if $weight == light { font-weight: 100;}
+  @else if $weight == heavy { font-weight: 900;}
+  @else { font-weight: normal;}
+}
+
+//@for 
+
+@for $i from 1 through 5 {
+    .col-#{$i} { width: (100/5*$i)+em;}
+}
+
+
+//each 
+
+@each $usr in bob, john, bill {
+    .#{$usr}-icon {
+        background-image: url('/img/#{$usr}.png'); 
+     }
+}
+
+$ppl: ( usr1:bob, usr2:john, usr3:bill );
+
+@each $key, $usr in $ppl  {
+    .#{$usr}-avatar {
+        background-image: url('/img/#{$usr}.png');
+    }
+}
+
+
+@each $usr, $color, $value in (usr1, black, 1), (usr2, red, 2), (usr3, blue, 3) {
+    .#{$usr}-icon {
+        background-image: url('/img/#{$usr}.png');
+        border:$value+px solid $color;
+     }
+}
+
+$usr1 : usr1,black, 1;
+$usr2 : usr2, red,  2;
+$usr3 : usr3, blue, 3;
+@each $usr, $color, $value in $usr1, $usr2, $usr3 {
+    .#{$usr}-icon {
+        background-image: url('/img/#{$usr}.png');
+        border:$value+px solid $color;
+     }
+}
+
+//while
+
+$i:1;
+@while $i < 5 {
+  .col-sm-#{$i} { width: 50 * $i +px}
+   $i : $i + 1 ;   
+}

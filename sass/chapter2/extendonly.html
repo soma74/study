@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="extendonly.css">
+</head>
+<body>
+   <div class="notice">
+    Sometimes you’ll write styles for a .class that you only ever want to @extend, and never want to use directly in your <a href="#">HTML</a>. This is especially true when writing a Sass library, where you may provide styles for users to @extend if they need and ignore if they don’t.
+ 
+    If you use normal classes for this, you end up creating a lot of extra <a href="#" class="error">CSS</a> when the stylesheets are generated, and run thea risk of colliding with other classes that are being used in the HTML. That’s why Sass supports “placeholder selectors” (for example, %foo).
+ </div>
+
+</body>
+</html>

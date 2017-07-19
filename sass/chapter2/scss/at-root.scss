@@ -1,0 +1,13 @@
+.select1 {
+  padding-top: 10px;
+  .select2 {
+    margin:10px;
+  }
+}
+
+.sel1 {
+  padding-top: 10px;
+  @at-root .sel2 {
+    margin:10px;
+  }
+}
