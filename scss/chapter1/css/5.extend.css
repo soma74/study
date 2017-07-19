@@ -1,0 +1,48 @@
+nav ul, header ul, aside ul {
+  list-style: none;
+  float: right;
+}
+nav ul li, header ul li, aside ul li {
+  display: inline-block;
+}
+nav ul li a, header ul li a, aside ul li a {
+  display: block;
+  padding: 5px 3px;
+  margin: 10px 20px;
+  text-decoration: none;
+  color: #999;
+}
+nav ul li a:hover, header ul li a:hover, aside ul li a:hover {
+  border-bottom: 1px dotted #ffb069;
+  color: #ffb069;
+}
+
+header {
+  background-color: #eee;
+  display: block;
+  height: 100px;
+}
+
+aside {
+  width: 250px;
+  float: left;
+}
+aside ul {
+  padding: 0;
+  margin-top: 30px;
+  float: left;
+}
+aside ul li {
+  display: block;
+}
+aside ul li a {
+  padding: 5px 10px;
+  margin: 0;
+  width: 100px;
+}
+aside ul li a:hover {
+  border: 1px solid #ff0000;
+  color: #ff0000;
+}
+
+/*# sourceMappingURL=5.extend.css.map */

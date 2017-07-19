@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACV,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,kBAAkB;;AAG3B,QAAS;EACR,KAAK,EAAE,IAAI;EAEX,cAAM;IACL,eAAe,EAAE,YAAY;;AAI/B,KAAM;EACL,eAAe,EAAE,IAAI",
+"sources": ["my_shop_list.scss"],
+"names": [],
+"file": "my_shop_list.css"
+}

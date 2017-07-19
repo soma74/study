@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,OAAQ;EACL,OAAO,EAAC,IAAI;EACb,SAAE;IACA,KAAK,EAAC,GAAG;IACT,eAAe,EAAC,IAAI;IACpB,eAAQ;MACN,eAAe,EAAC,SAAS;;AAM/B,QAAS;EACP,OAAO,EAAC,IAAI;EACZ,iBAAW;IACT,MAAM,EAAC,IAAI",
-"sources": ["../scss/wait1.scss"],
-"names": [],
-"file": "wait1.css"
-}

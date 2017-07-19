@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,eAAkB;EAChB,KAAK,EAAC,GAAG;EACT,eAAe,EAAE,IAAI;EACrB,WAAW,EAAE,IAAI",
-"sources": ["../scss/extendonly.scss"],
-"names": [],
-"file": "extendonly.css"
-}

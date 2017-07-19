@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,QAAS;EACP,WAAW,EAAE,IAAI;EACjB,iBAAS;IACP,MAAM,EAAC,IAAI;;AAIf,KAAM;EACJ,WAAW,EAAE,IAAI;EACR,KAAM;IACb,MAAM,EAAC,IAAI",
-"sources": ["../scss/at-root.scss"],
-"names": [],
-"file": "at-root.css"
-}

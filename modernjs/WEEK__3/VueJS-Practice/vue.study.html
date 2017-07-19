@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>기본 컨셉 - Vue JS</title>
+
+	<!-- Load Data File -->
+	<script src="./data/hello.vue.js"></script>
+	
+	<!-- Load Scripts -->
+	<script src="https://unpkg.com/jquery"></script>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+	<div class="demo">
+		<label for="user_input">데이터 바인딩</label>
+		<input id="user_input" type="text" class="user-input">
+		<p class="user-input-print">입력된 값은 <span class="data-binding">....</span>입니다.</p>
+	</div>
+
+	<div class="vue-demo">
+		<label for="vue_user_input">데이터 바인딩</label>
+		<input id="vue_user_input" type="text" class="user-input" v-model="message">
+		<p class="user-input-print">입력된 값은 <span class="data-binding">{{message}}</span>입니다.</p>
+	</div>
+
+	<div id="app-7">
+		<ol>
+			<!-- 이제 각 todo-item 에 todo 객체를 제공합니다. -->
+			<!-- 화면에 나오므로, 각 항목의 컨텐츠는 동적으로 바뀔 수 있습니다. -->
+			<todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+		</ol>
+	</div>
+
+	<!-- Write Scriptp code -->
+	<script>
+		// Vanilla Script
+		(function(global) {
+			'use strict';
+
+			// TODO:
+			// 데이터를 문서 요소에 바인딩
+			// 바인딩 된 데이터는 사용자 뷰에 렌더링
+			// 사용자는 뷰의 인풋 요소에 값을 수정함으로서 뷰를 업데이트
+			// 업데이트 된 인풋의 값은 데이터(vue_data)의 값을 변경해야 한다.
+
+			var data = vue_data;
+			var document = global.document;
+			var demo, input, print, binding;
+			
+			function init() 
+			{
+				// DOM에 접근, 변수에 문서 요소 객체를 참조
+				demo = document.querySelector('.demo');
+				input = demo.querySelector('.user-input');
+				print = demo.querySelector('.user-input-print');
+				binding = print.querySelector('.data-binding');
+
+				// rendering을 수행하는 함수 실행
+				render();
+
+				// event binding 수행하는 함수 실행
+				bindEvents();
+			}
+
+			function bindEvents()
+			{
+				input.addEventListener('keyup', update); // Modern IE 9+
+				// input.onkeyup = update; // Legacy
+			}
+
+			function render(content)
+			{
+				// ES5 함수에 매개변수 초기 값을 설정하는 방법
+				content = content || data.message;
+
+				// input, binding 데이터 바인딩 -> 뷰 렌더링
+				input.value = content;
+				binding.innerHTML = content;
+			}
+
+			function update(e) 
+			{
+				// 지역변수
+				var _input = e.target;
+				var change_value = _input.value;
+
+				render(change_value);
+
+				// 모델(Model, State)을 업데이트(수정)
+				vue_data.message = change_value;
+			}
+
+			// 초기화 함수 실행
+			init();
+		}); // (window);
+		
+		// jQuery
+		(function(global, $) {
+			'use strict';
+
+			var init, render, update, bindEvents, $demo, $input, $print, $data_binding;
+
+			init = function() {
+				$demo = $('.demo');
+				$input = $('.user-input', $demo);
+				$print = $('.user-input-print', $demo);
+				$data_binding = $('.data-binding', $print);
+
+				// 대상을 올바르게 수집하였는가?
+				console.log($demo);
+				console.log($input);
+				console.log($print);
+				console.log($data_binding);
+
+				// 초기 렌더링 수행
+				render();
+
+				// 이벤트 연결
+				bindEvents();
+			};
+
+			render = function(content) {
+				// ES5 함수에 매개변수 초기 값을 설정하는 방법
+				content = content || vue_data.message;
+
+				// input, binding 데이터 바인딩 -> 뷰 렌더링
+				$input.val(content);
+				$data_binding.text(content);
+			};
+
+			update = function(e) {
+				var content = e.target.value;
+
+				render(content);
+
+				// 모델(Model, State)을 업데이트(수정)
+				vue_data.message = content;
+			};
+
+			bindEvents = function() {
+				$input.on('keyup', update);
+			};
+
+			init();
+		}); // (window, window.jQuery);
+
+		// Vue JS
+		(function(global, Vue) {
+			'use strict';
+
+			// Vue 인스턴스(객체)를 생성
+			// 인스턴스 생성과정에서 부트스트래핑(초기 수행)에 사용할 옵션 객체를 설정
+			var vm = new Vue({
+				// 마운트(Mount) 요소의 선택자를 등록
+				el: '.vue-demo',
+				// 사용할 데이터를 연결
+				data: {
+					message: vue_data.message
+				}
+			});
+			
+			Vue.component('todo-item', {
+				props: ['todo'],
+				template: '<li>{{ todo.text }}</li>'
+			});
+
+			var app7 = new Vue({
+				el: '#app-7',
+				data: {
+					groceryList: [
+						{ text: '채소' },
+						{ text: '치즈' },
+						{ text: '사람이 먹을 수 있는 다른 무언가' }
+					]
+				}
+			});
+
+			// 노출 패턴
+			global.vm = vm;
+		})(window, window.Vue);		
+
+		// ES6 + Build System 을 사용하면 아래와 같은 모듈이 필요없으나...
+		// 현재 ES5를 쓰는 환경이라 전역과 구분되는 모듈이 필요하다.
+		// ;(function(global, $, Vue) {
+		// 	'use strict';
+		// })(window, window.jQuery, window.Vue);
+	</script>
+
+</body>
+</html>

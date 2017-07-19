@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,WAAY;EAEX,KAAK,EADG,IAAmB;;AAI5B,YAAa;EAEZ,KAAK,EADG,GAAoB",
-"sources": ["../scss/if.test.scss"],
-"names": [],
-"file": "if.test.css"
-}

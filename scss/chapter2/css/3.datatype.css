@@ -1,0 +1,32 @@
+p.foo {
+  border-color: #ff0000;
+  margin: 10px 2px 5px 10px;
+  font-family: "lucida Grande", sans-serif;
+}
+
+.header {
+  border-color: #ff0000;
+}
+
+/* Color Operations */
+div {
+  color: rgba(255, 0, 0, 0.8);
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+a {
+  color: rgba(255, 255, 0, 0.75);
+}
+
+/* Variable Defaults: !default */
+#main {
+  content: "First content";
+  new-content: "First time reference";
+}
+
+#main {
+  content: "Second content?";
+  new-content: "second time reference";
+}
+
+/*# sourceMappingURL=3.datatype.css.map */

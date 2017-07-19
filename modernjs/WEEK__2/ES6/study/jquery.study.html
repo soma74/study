@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery + ES6</title>
+  <style>
+    .music-playlist {
+      margin-top: 1rem;
+      margin-bottom: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .music-playlist-item {
+      padding: 0.3em;
+      margin-bottom: 0.3em;
+      border: 1px solid #eee;
+    }
+    .music-playlist-img {
+      float: left;
+      margin-right: 1rem;
+      width: 80px;
+      height: auto;
+    }
+    .music-playlist-content {
+      margin-top: 2rem;
+      margin-bottom: 0;
+    }
+    .rwd-img {
+      width: 100%;
+      height: auto;
+    }
+    .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+
+</head>
+<body>
+
+ <!--  <ul class="music-playlist">
+    <li class="music-playlist-item clearfix">
+      <img class="music-playlist-img" src="./Data/media/cover/001.EdSheeran-ShapeOfYou.jpg" alt>
+      <p class="music-playlist-content">EdSheeran - Shape Of You</p>
+    </li>
+  </ul> -->
+
+<!-- Load data -->
+<!-- <script src="./Data/music_list.js"></script> -->
+
+<!-- Load jQuery Library -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./js/jquery.control.music-playlist.js"></script>
+
+</body>
+</html>

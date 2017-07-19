@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "compile": "node_modules/.bin/babel src -d dist",
+    "watch": "node_modules/.bin/babel src -d dist -w"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0"
+  }
+}
