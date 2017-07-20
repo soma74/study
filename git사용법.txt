@@ -1,1 +1,23 @@
 http://blog.naver.com/won2gonzo/220741696746
+
+1. 로그인
+git config -- global user.name "soma74"
+git config --global user.email "soma2002kr@gmail.com"
+
+2. 저장소에 최초 push
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/soma74/study.git
+git push -u origin master
+
+3. 저장소에서 로컬로 pull
+git clone https://github.com/soma74/study.git
+
+4. commit
+git add .
+git commit -m "메세지"
+git push -u origin master
+
+5. pull
+git pull
