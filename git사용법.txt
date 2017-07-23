@@ -1,7 +1,7 @@
 http://blog.naver.com/won2gonzo/220741696746
 
 1. 로그인
-git config -- global user.name "soma74"
+git config --global user.name "soma74"
 git config --global user.email "soma2002kr@gmail.com"
 
 2. 저장소에 최초 push
