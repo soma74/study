@@ -7,8 +7,8 @@ const STATES = {
 	STOPPED: 'stopped',
 	PAUSED: 'paused'
 };
-const WORKING_TIME_LENGTH_IN_MINUTES = 1;
-const RESTING_TIME_LENGTH_IN_MINUTES = 2;
+const WORKING_TIME_LENGTH_IN_MINUTES = 50;
+const RESTING_TIME_LENGTH_IN_MINUTES = 10;
 
 new Vue({
 	el: '#app',
@@ -58,9 +58,12 @@ new Vue({
 			this.second = 0;
 		},
 		_tick: function() {
-			if(this.second % 10)
+			if(this.pomodoroState === POMODORO_STATES.REST)
 			{
-				this.timestamp = new Date().getTime();
+				if(this.second % 10 === 0)
+				{
+					this.timestamp = new Date().getTime();
+				}
 			}
 
 			// second가 0이 아니라면 값을 감소시킨다.
@@ -92,4 +95,4 @@ new Vue({
 			}
 		}
 	}
-})
+});
