@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang='ko'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script
+			  src="//code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<template id="form">
+		<div>
+			<label for="name">What's your name?</label>
+			<input type="text" id="name" v-bind:value="value" v-on:input="onInput">
+		</div>
+	</template>
+
+	<template id="hello">
+		<h1>{{ msg }} {{ user }}</h1>
+	</template>
+	
+	<template id="greetings">
+		<div>
+			<form-component v-model="user"></form-component>
+			<hello-component v-bind:user="user"></hello-component>
+		</div>
+	</template>
+
+	<div id="app">
+		<greetings-component></greetings-component>
+	</div>
+		
+</body>
+</html>
+<script>
+	Vue.component('form-component', {
+		template: '#form',
+		props: ['value'],
+		methods: {
+			onInput: function(event) {
+				this.$emit('input', event.target.value);
+			}
+		}
+	});
+
+	Vue.component('hello-component', {
+		template: '#hello', 
+		data: function() {
+			return { 
+				msg: 'Hello'
+			};
+		},
+		props: ['user']
+	});
+
+	Vue.component('greetings-component', {
+		template: '#greetings',
+		data: function() {
+			return {
+				user: 'hero'
+			};
+		}
+	});
+
+	new Vue({
+		el: '#app'
+	});
+</script>
