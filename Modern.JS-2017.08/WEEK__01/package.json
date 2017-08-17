@@ -1,0 +1,22 @@
+{
+  "name": "modern_javascript",
+  "version": "1.0.0",
+  "description": "Study Modern JavaScript Env.",
+  "private": true,
+  "scripts": {
+    "dev": "npm run babel-w | npm run serve",
+    "serve": "node_modules/.bin/live-server",
+    "babel": "node_modules/.bin/babel src/main.js -o dist/main.js",
+    "babel-w": "npm run babel -- -w"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "live-server": "^1.2.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
