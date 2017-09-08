@@ -40,9 +40,12 @@
 <script>
 	Vue.component('form-component', {
 		template: '#form',
+
+		// value 값은 부모컴포넌트의 user 값과 연결이 되는데 어떻게 연결이 되는거지?
 		props: ['value'],
 		methods: {
 			onInput: function(event) {
+				// 'input' 는 태그명인가?
 				this.$emit('input', event.target.value);
 			}
 		}
