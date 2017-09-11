@@ -16,21 +16,31 @@
 <body>
     <div id="app" class="container">
         <h2>{{ title }}</h2>
-        <add-item-component @add="addItem"></add-item-component><!-- @add 의 add는 $emit() 의 첫번째 인자인가? @add 와 연결된 부모의 addItem methods 를 호출 -->
-        <items-component :items="items"></items-component><!-- Vue 인스턴스의 data.items와 어떻게 연결이 되는건지? -->
+
+        <!-- @add 의 add는 $emit() 의 첫번째 인자인가? @add 와 연결된 부모의 addItem methods 를 호출 -->
+        <add-item-component @add="addItem"></add-item-component>
+
+        <!-- Vue 인스턴스의 data.items와 어떻게 연결이 되는건지? -->
+        <items-component :items="items"></items-component>
 
         <div class="footer">
             <hr/>
-            <change-title-component v-model="title"></change-title-component><!-- Vue 인스턴스의 data.title와 어떻게 연결이 되는건지? -->
+
+            <!-- Vue 인스턴스의 data.title와 어떻게 연결이 되는건지? -->
+            <change-title-component v-model="title"></change-title-component>
         </div>
     </div>  
     
     <!-- 새로운 항목을 추가하는 템플릿 -->
     <template id="add-item-template">
         <div class="input-group">
-            <input type="text" @keyup.enter="addItem" v-model="newItem" placeholder="add shopping list item" class='form-control'><!-- add-item-template 콤포넌트의 addItem methods 호출 -->
+
+            <!-- add-item-template 콤포넌트의 addItem methods 호출 -->
+            <input type="text" @keyup.enter="addItem" v-model="newItem" placeholder="add shopping list item" class='form-control'>
             <span class='input-group-btn'>
-                <button @click="addItem" class="btn brn-default" type="button">Add!</button><!-- add-item-template 콤포넌트의 addItem methods 호출 -->
+
+                <!-- add-item-template 콤포넌트의 addItem methods 호출 -->
+                <button @click="addItem" class="btn brn-default" type="button">Add!</button>
             </span>
         </div>
     </template>
@@ -38,7 +48,8 @@
     <!-- 항목을 나열하는 템플릿 -->
     <template id="items-template">
         <ul>
-            <item-component v-for="(item, index) in items" :item="item" :key="index"></item-component><!-- :item=item 에서 앞 item은 자식콤포넌트에서 사용할 변수명이고 뒤 item은 부모 변수명 -->
+            <!-- :item=item 에서 앞 item은 자식콤포넌트에서 사용할 변수명이고 뒤 item은 부모 변수명 -->
+            <item-component v-for="(item, index) in items" :item="item" :key="index"></item-component>
         </ul>
     </template>
 
@@ -59,7 +70,9 @@
     <template id="change-title-template">
         <div>
             <em>Change the title of your shopping list here</em>
-            <input type="text" v-bind:value="value" v-on:input="onInput"><!-- value 값은 부모의 data.title 값과 연결이 되는데 어떻게 연결이 되는거지? -->
+
+            <!-- value 값은 부모의 data.title 값과 연결이 되는데 어떻게 연결이 되는거지? -->
+            <input type="text" v-bind:value="value" v-on:input="onInput">
         </div>
     </template>
     <!-- <script src="../js/es5/my_shop_list_vue.js"></script> -->
