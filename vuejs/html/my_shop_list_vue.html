@@ -42,7 +42,44 @@
             </span>
         </div>
     </template>
+    
+    <!-- 항목을 나열하는 템플릿 -->
+    <template id="items-template">
+        <ul>
+            <!-- :item=item 에서 앞 item은 자식콤포넌트에서 사용할 변수명이고 뒤 item은 부모 변수명 -->
+            <item-component v-for="(item, index) in items" :item="item" :key="index"></item-component>
+        </ul>
+    </template>
+
+    <!-- 항목을 보여주는 템플릿 -->
+    <template id="item-template">
+        <li>
+            <div :class="{'removed': item.checked }">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" v-model="item.checked"> {{ item.text }}
+                    </label>
+                </div>
+            </div>
+        </li>
+    </template>
+
+    <!-- 제목을 변경하는 템플릿 -->
+    <template id="change-title-template">
+        <div>
+            <em>Change the title of your shopping list here</em>
+
+            <!-- value 값은 부모의 title 값과 연결이 되는데 어떻게 연결이 되는거지? -->
+            <input type="text" v-bind:value="value" @input="onInput">
+        </div>
+    </template>
+    <!-- <script src="../js/es5/my_shop_list_vue.js"></script> -->
     <script>
+        var data = {
+            items: [{ text: 'Bananas', checked: true }, { text: 'Apples', checked: false }],
+            title: 'My Shopping List'
+        };
+
         // 아이템 컴포넌트 추가
         Vue.component('add-item-component', {
             template: '#add-item-template',
@@ -63,53 +100,19 @@
                 }
             }
         });
-    </script>
-    
-    <!-- 항목을 나열하는 템플릿 -->
-    <template id="items-template">
-        <ul>
-            <!-- :item=item 에서 앞 item은 자식콤포넌트에서 사용할 변수명이고 뒤 item은 부모 변수명 -->
-            <item-component v-for="(item, index) in items" :item="item" :key="index"></item-component>
-        </ul>
-    </template>
-    <script>
+
         // 아이템 컴포넌트
         Vue.component('items-component', {
             template: '#items-template',
             props: ['items']
         });
-    </script>
 
-    <!-- 항목을 보여주는 템플릿 -->
-    <template id="item-template">
-        <li>
-            <div :class="{'removed': item.checked }">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" v-model="item.checked"> {{ item.text }}
-                    </label>
-                </div>
-            </div>
-        </li>
-    </template>
-    <script>
         // 아이템 컴포넌트
         Vue.component('item-component', {
             template: '#item-template',
             props: ['item']
         });
-    </script>    
 
-    <!-- 제목을 변경하는 템플릿 -->
-    <template id="change-title-template">
-        <div>
-            <em>Change the title of your shopping list here</em>
-
-            <!-- value 값은 부모의 title 값과 연결이 되는데 어떻게 연결이 되는거지? -->
-            <input type="text" v-bind:value="value" v-on:input="onInput">
-        </div>
-    </template>
-    <script>
         // 제목 컴포넌트 변경
         Vue.component('change-title-component', {
             template: '#change-title-template',
@@ -120,13 +123,6 @@
                 }
             }
         });
-    </script>
-    <!-- <script src="../js/es5/my_shop_list_vue.js"></script> -->
-    <script>
-        var data = {
-            items: [{ text: 'Bananas', checked: true }, { text: 'Apples', checked: false }],
-            title: 'My Shopping List'
-        };
 
         new Vue({
             el: '#app',
